@@ -642,6 +642,11 @@ js.Browser.createXMLHttpRequest = function() {
 	if(typeof ActiveXObject != "undefined") return new ActiveXObject("Microsoft.XMLHTTP");
 	throw "Unable to create XMLHttpRequest object.";
 };
+js.Lib = function() { };
+js.Lib.__name__ = true;
+js.Lib.alert = function(v) {
+	alert(js.Boot.__string_rec(v,""));
+};
 var layout = {};
 layout.Content = function() {
 	scooby.display.DisplayContainer.call(this,"PageContent");
@@ -716,9 +721,10 @@ pages.LoginPage.__super__ = scooby.display.DisplayContainer;
 pages.LoginPage.prototype = $extend(scooby.display.DisplayContainer.prototype,{
 	onClick: function(e) {
 		scooby.common.Server.ask("auth/login",$bind(this,this.onLoginResult),{ email : this.email.get_text(), password : this.password.get_text()});
+		js.Lib.alert("Auth email: " + this.email.get_text() + ", password: " + this.password.get_text());
 	}
 	,onLoginResult: function(data) {
-		haxe.Log.trace(data,{ fileName : "LoginPage.hx", lineNumber : 41, className : "pages.LoginPage", methodName : "onLoginResult"});
+		haxe.Log.trace(data,{ fileName : "LoginPage.hx", lineNumber : 44, className : "pages.LoginPage", methodName : "onLoginResult"});
 	}
 	,__class__: pages.LoginPage
 });

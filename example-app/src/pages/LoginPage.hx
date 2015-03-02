@@ -1,4 +1,5 @@
 package pages;
+import js.Lib;
 import scooby.events.Event;
 import scooby.common.Server;
 import scooby.ui.Button;
@@ -34,6 +35,8 @@ class LoginPage extends DisplayContainer {
 			email: email.text,
 			password: password.text
 		});
+		
+		Lib.alert("Auth email: " + email.text + ", password: " + password.text);
 		
 	}
 	
