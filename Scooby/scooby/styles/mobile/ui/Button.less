@@ -1,0 +1,57 @@
+.Button {
+	
+	cursor: pointer;
+	
+	background: #d6d6d6;
+	color:#555555;
+	
+	padding: 10px 10px 10px 10px;
+	margin-bottom:10px;
+	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	
+	.flexbox();
+	.align-items(center);
+	.justify-content(center);
+	
+	&:hover{
+		opacity:0.9;
+	}
+	
+	&.primary{
+		background: #3498db;
+		color: white;
+	}
+	
+	&.checked{
+		background: #444444;
+		color: white;
+	}
+	
+	.Picture{
+		
+		height:50%;
+		margin-left:10px;
+		
+		&:first-child{
+			margin-left:0px;
+		}
+	}
+	
+	.Label{
+		
+		text-align:center;
+		
+		line-height:100%;
+		padding:0px;
+		margin-left:10px;
+		
+		&:first-child{
+			margin-left:0px;
+		}
+	}
+	
+}
+
+
+

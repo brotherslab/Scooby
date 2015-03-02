@@ -1,0 +1,359 @@
+html,
+body {
+  font-family: sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  -webkit-overflow-scrolling: auto;
+}
+.hidden {
+  display: none !important;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.SidePanel {
+  z-index: 101;
+  background: black;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 260px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3d(-260px, 0, 0);
+  transform: translate3d(-260px, 0, 0);
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+}
+.SidePanel.opened {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.SidePanelTint {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.Label {
+  padding: 10px 0;
+}
+.Label.Header {
+  font-weight: bold;
+  font-size: 140%;
+}
+.Label.Error {
+  color: red;
+}
+.Button {
+  cursor: pointer;
+  background: #d6d6d6;
+  color: #555555;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.Button:hover {
+  opacity: 0.9;
+}
+.Button.primary {
+  background: #3498db;
+  color: white;
+}
+.Button.checked {
+  background: #444444;
+  color: white;
+}
+.Button .Picture {
+  height: 50%;
+  margin-left: 10px;
+}
+.Button .Picture:first-child {
+  margin-left: 0px;
+}
+.Button .Label {
+  text-align: center;
+  line-height: 100%;
+  padding: 0px;
+  margin-left: 10px;
+}
+.Button .Label:first-child {
+  margin-left: 0px;
+}
+.ButtonGroup.dark .Button {
+  background: transparent;
+  color: white;
+}
+.Input {
+  padding: 10px;
+  display: block;
+  width: 100%;
+  border-radius: 0px;
+  border: 1px solid #666666;
+  margin-bottom: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea.Input {
+  height: 150px;
+}
+.AjaxDropdown {
+  position: relative;
+  margin-bottom: 10px;
+}
+.AjaxDropdown .Input {
+  margin-bottom: 0px;
+}
+.AjaxDropdownContainer {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid #CBD3DD;
+  background: #ffffff;
+  max-height: 300px;
+}
+.AjaxDropdownContainer .Button {
+  background: transparent;
+  margin-bottom: 0px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.AjaxDropdownContainer .Button:hover {
+  background: #f0f0f0;
+  color: #3498db;
+}
+.ProgressBar {
+  height: 10px;
+  background: #cccccc;
+  margin-bottom: 10px;
+}
+.ProgressBar .ProgressLine {
+  height: 100%;
+  background: #777777;
+}
+.ProgressBar.red .ProgressLine {
+  background: #ff0000;
+}
+.ProgressBar.blue .ProgressLine {
+  background: #0000ff;
+}
+.ToolBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #00aef7;
+  color: white;
+  z-index: 98;
+  padding: 0px;
+  padding-top: 15px;
+}
+.ToolBar .Button {
+  height: 50px;
+  background: transparent;
+  color: white;
+  padding: 0px 10px;
+  float: left;
+  margin-left: 10px;
+}
+.ToolBar .Button.right {
+  float: right;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+.ToolBar .Button.left {
+  float: left;
+}
+.ToolBar .Button .Label {
+  text-align: center;
+  line-height: 50px;
+  padding: 0px;
+}
+.ToolBar .ToolBarLabel {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -2;
+  line-height: 50px;
+  padding: 0px;
+}
+.toolbar-offset {
+  padding-top: 75px;
+}
+.GoogleMap {
+  width: 100%;
+  height: 600px;
+}
+.PopupWindow {
+  z-index: 1000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #ffffff;
+}
+.PopupWindowContent {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 10px;
+}
+.VArea,
+.HArea {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.VArea > .ScrollableFix {
+  position: absolute;
+  bottom: -2px;
+  width: 2px;
+  height: 2px;
+  z-index: -2;
+}
+.HArea > .ScrollableFix {
+  position: absolute;
+  right: -2px;
+  width: 2px;
+  height: 2px;
+  z-index: -2;
+}
+.toolbar-offset > .Page {
+  top: 65px;
+}
+.Page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0px;
+  right: 0px;
+}
+.Page.pull-to-refresh {
+  top: 0px;
+  padding-top: 0px;
+}
+.PullToRefresh {
+  display: block;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.PullToRefresh .PullToRefreshIcon {
+  width: 32px;
+  height: 32px;
+  background-image: url('img/arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attacment: center center;
+  margin-right: 10px;
+}
+.PullToRefresh .Label {
+  color: #8c8c8c;
+}
+.PullToRefresh.refreshing {
+  margin-top: 65px;
+}
+.PullToRefresh.refreshing .PullToRefreshIcon {
+  background-image: url('img/preloader.gif');
+}
+.TreeNode {
+  width: 225px;
+}
+.TreeViewContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+.TreeView {
+  overflow: hidden;
+}
+.CustomPage {
+  width: 100%;
+  height: 100%;
+}
+.GoogleMap {
+  width: 100%;
+  height: 100%;
+}
+.PageHeader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
+  height: 88px;
+  background-color: #cccccc;
+}
+.LogoHeader {
+  font-size: 24px;
+  line-height: 88px;
+  padding: 0;
+  margin: 0;
+  text-indent: 10px;
+}
+.LeftSidebar {
+  position: absolute;
+  left: 0px;
+  top: 88px;
+  width: 225px;
+  bottom: 0;
+  background-color: #2f3f6a;
+  padding-top: 20px;
+}
+.PageContent {
+  padding: 10px;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  left: 225px;
+  top: 88px;
+  bottom: 0;
+  background: #ffffff;
+}

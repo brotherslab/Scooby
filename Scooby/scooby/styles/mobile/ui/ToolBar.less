@@ -1,0 +1,67 @@
+@toolbarHeight:50px;
+@translucentHeight:15px;
+
+.ToolBar{
+	
+	position: absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:@toolbarHeight;
+	line-height:@toolbarHeight;
+	text-align:center;
+	
+	background: #00aef7;
+	
+	color: white;
+	z-index:98;
+	padding:0px;
+	padding-top:@translucentHeight;
+	
+	.Button{
+		
+		height:@toolbarHeight;
+		background: transparent;
+		color: white;
+		
+		padding:0px 10px;
+		float:left;
+		margin-left:10px;
+		
+		&.right{
+			float:right;
+			margin-right:10px;
+			margin-left:0px;
+		}
+
+		&.left{
+			float:left;
+		}
+		
+		
+		.Label{
+			text-align:center;
+			line-height:@toolbarHeight;
+			padding:0px;
+		}
+		
+	}
+	
+	.ToolBarLabel{
+		position:absolute;
+		top:@translucentHeight;
+		left:0px;
+		right:0px;
+		bottom:0px;
+		z-index:-2;
+		line-height:@toolbarHeight;
+		padding:0px;
+
+	}
+}
+
+.toolbar-offset{
+	padding-top: @toolbarHeight+@translucentHeight+10px;
+}
+
+

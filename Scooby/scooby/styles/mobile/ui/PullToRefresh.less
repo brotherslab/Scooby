@@ -1,0 +1,39 @@
+.PullToRefresh{
+	
+	display:block;
+	height:@toolbarHeight+@translucentHeight;
+
+	.flexbox();
+	.align-items(center);
+	.justify-content(center);
+	
+	
+	.PullToRefreshIcon{
+		width:32px;
+		height:32px;
+		background-image: url('img/arrow.svg');
+		background-size:contain;
+		background-repeat:no-repeat;
+		background-attacment:center center;
+		margin-right:10px;
+	}
+	
+	.Label{
+			color:#8c8c8c;
+	}
+	
+	&.refreshing{
+		
+		margin-top:@toolbarHeight+@translucentHeight;
+		
+		.PullToRefreshIcon{
+			background-image: url('img/preloader.gif');
+		}
+	}
+}
+
+
+
+
+
+

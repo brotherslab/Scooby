@@ -1,0 +1,41 @@
+
+
+.VArea, .HArea{
+	.scrollable();
+}
+
+.VArea > .ScrollableFix{
+	position:absolute;
+	bottom:-2px;
+	width:2px;
+	height:2px;
+	z-index:-2;
+}
+
+.HArea > .ScrollableFix{
+	position:absolute;
+	right:-2px;
+	width:2px;
+	height:2px;
+	z-index:-2;
+}
+
+.toolbar-offset > .Page{
+	top:@toolbarHeight + @translucentHeight;
+}
+
+.Page {
+	
+	position: absolute;
+    left: 0;
+    top: 0;
+    bottom:0px;
+	right:0px;
+	
+	&.pull-to-refresh {
+		top:0px;
+		padding-top:0px;
+	}
+}
+
+

@@ -1,0 +1,31 @@
+
+@panelWidth:260px;
+@panelsDuration: 400ms;
+
+.SidePanel {
+
+  z-index: 101;
+  background: black;
+  
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: @panelWidth;
+  
+  .scrollable();
+  .translate3d(-@panelWidth);
+  .transition(@panelsDuration);
+  
+  &.opened{
+	.translate3d(0);  
+  }
+  
+}
+
+.SidePanelTint{
+	z-index:100;
+	.full-size();
+	.transition(400ms);
+	background-color:rgba(0,0,0,0.4);
+}
